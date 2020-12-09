@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+$primaryColor: #4c95e9;
+$accentColor: #14549c;
 
 html, body { 
     height: 100%;
@@ -18,7 +20,7 @@ body {
 
 h1 {
     font-size: 1.5rem !important;
-    color: #4c95e9 !important;
+    color: $primaryColor !important;
     font-weight: bold !important;
     margin: 0px !important;
 }
@@ -57,7 +59,7 @@ h3 {
 }
 
 .mat-raised-button {
-    background-color: #4c95e9 !important;
+    background-color: $primaryColor !important;
 }
 
 table {
@@ -74,11 +76,11 @@ td, th {
 }
 
 .rb-label {
-    color: #14549c !important;
+    color: $accentColor !important;
 }
 
 .rb-noData {
     width: 100%;
     text-align: center;
-    color: #135aac !important;
+    color: $accentColor !important;
 }
