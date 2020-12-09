@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%;
+    font-size: 16px;
+}
+
+body { 
+    margin: 0;
+    padding: 16px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: url("./assets/images/bg.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 1.5rem !important;
+    color: #4c95e9 !important;
+    font-weight: bold !important;
+    margin: 0px !important;
+}
+
+h3 {
+    font-size: 1rem !important;
+    opacity: 0.75;
+}
+
+.rb-headerClass {
+    height: 72px !important;
+}
+
+.rb-FooterWrapper {
+    height: 16px;
+}
+
+.rb-uploadBlock {
+    width: 50% !important;
+}
+
+.rb-uploadBlock_xs {
+    width: 100% !important;
+}
+
+.rb-file-info {
+    opacity: 0.75;
+}
+
+.rb-clearClass {
+    cursor: pointer;
+}
+
+.rb-tableContainer {
+    margin-bottom: 24px;
+}
+
+.mat-raised-button {
+    background-color: #4c95e9 !important;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    width: 25%;
+}
+
+.mat-form-field {
+    font-size: 0.875rem;
+    width: 100%;
+}
+
+.rb-label {
+    color: #14549c !important;
+}
+
+.rb-noData {
+    width: 100%;
+    text-align: center;
+    color: #135aac !important;
+}

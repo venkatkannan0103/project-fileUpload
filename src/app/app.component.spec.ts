@@ -1,6 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { NgModuleFactoryLoader } from '@angular/core';
+import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { Location} from '@angular/common'
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ScreensModule } from './screens/screens.module';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -20,16 +25,24 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'project-fileUpload'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('project-fileUpload');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should navigate to screens child path', fakeAsync(() => {
+    let router = TestBed.get(Router);
+    let location = TestBed.get(Location);
+    let fixture = TestBed.createComponent(AppComponent);
+    router.initialNavigation();
+  
+    const loader = TestBed.get(NgModuleFactoryLoader);
+    loader.stubbedModules = {lazyModule: ScreensModule};
+  
+    router.resetConfig([
+      {path: 'screens', loadChildren: 'lazyModule'},
+    ]);
+  
+    router.navigateByUrl('/screens/issue-analyzer');
+  
+    tick();
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('project-fileUpload app is running!');
-  });
+  
+    expect(location.path()).toBe('/screens/issue-analyzer');
+  }));
 });
