@@ -15,6 +15,7 @@ This model application is built with **Angular 10, Typescript & scss**
   - Used Utils
   - Used Modules
   - Used Models
+  - Basic Test cases added
 
 **Installation:**
 The application can be installed by downloading this code to your system, navigate to the root directory, and run the following command.
