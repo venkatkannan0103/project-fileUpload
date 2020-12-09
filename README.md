@@ -6,7 +6,7 @@ This model application is built with **Angular 10, Typescript & scss**
   - v12.19.0
 
 **Features:**
-  - Responsive supported
+  - Responsive supported - *Used Angular Flex Layout*
   - Table supports - Sort, Pagination and Filter based on Issue count(as per Requirement)
 
 **Technical Knowledge:**
@@ -29,5 +29,5 @@ The application can be installed by downloading this code to your system, naviga
 - Run ng serve for a dev server. The application is accessible at http://localhost:4200/screens/issue-analyzer
 
 **Author:**
-Venkatachal Kannan --- venkatkannan728@gmail.com
-**GitHub** - venkatkannan0103
+Venkatachalam Kannan --- *venkatkannan728@gmail.com*
+**GitHub** - *venkatkannan0103*
